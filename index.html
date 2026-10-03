@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Алина Япарова — UI/UX и веб-дизайнер</title>
+<meta name="description" content="Портфолио Алины Япаровой: лендинги и интерфейсы в Figma.">
+<meta property="og:title" content="Алина Япарова — UI/UX и веб-дизайнер">
+<meta property="og:description" content="Портфолио: лендинги и интерфейсы в Figma.">
+<meta property="og:image" content="img/perfume.webp">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F1EC; --ink:#151515; --text:#2B2925; --mute:#77736C; --line:#D9D5CC; --card:#fff;
+  --pad:clamp(20px,5vw,72px); --max:1280px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;line-height:1.5}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:rgba(243,241,236,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:600;letter-spacing:-.01em}
+nav{display:flex;gap:28px;font-size:15px}
+nav a{color:var(--mute);transition:color .2s}
+nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;padding-top:clamp(40px,8vw,96px);padding-bottom:clamp(56px,9vw,120px)}
+.hero h1{font-weight:600;font-size:clamp(56px,9vw,112px);line-height:.95;letter-spacing:-.04em;margin-top:24px}
+.role{font-size:clamp(20px,2.2vw,26px);font-weight:500;margin-top:28px}
+.intro{font-size:17px;color:var(--text);margin-top:14px;max-width:470px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:100px;padding:14px 22px;font-size:15px;font-weight:500;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.ghost{border:1px solid var(--ink)}
+.stack{position:relative;aspect-ratio:1/0.92}
+.stack img{position:absolute;border-radius:16px;box-shadow:0 24px 60px rgba(20,18,14,.18)}
+.stack .a{width:80%;top:0;right:0}
+.stack .b{width:68%;top:36%;left:0}
+.stack .c{width:62%;top:60%;right:6%}
+
+/* works */
+section{scroll-margin-top:72px}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:20px;border-top:1px solid var(--line);padding-top:28px;margin-bottom:clamp(32px,5vw,56px)}
+.sec-head h2{font-weight:600;font-size:clamp(36px,5vw,56px);letter-spacing:-.03em;line-height:1}
+.case{display:grid;grid-template-columns:330px 1fr;gap:clamp(32px,5vw,64px);align-items:center;padding:clamp(28px,4vw,48px) 0}
+.case + .case{border-top:1px solid var(--line)}
+.num{font-weight:600;font-size:15px}
+.num em{font-style:normal;color:var(--mute);font-weight:400}
+.kind{font-size:13px;color:var(--mute);margin-top:28px}
+.case h3{font-weight:600;font-size:clamp(34px,4vw,46px);line-height:1.02;letter-spacing:-.03em;margin-top:8px}
+.lead{font-size:16px;color:var(--text);margin-top:18px}
+.case ul{list-style:none;margin-top:20px}
+.case li{font-size:14px;color:#45423D;padding:9px 0 9px 18px;border-top:1px solid var(--line);position:relative}
+.case li:last-child{border-bottom:1px solid var(--line)}
+.case li::before{content:"";position:absolute;left:2px;top:17px;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+.tag{font-size:12px;color:var(--mute);margin:22px 0 12px}
+.shot{display:flex;justify-content:center}
+.shot a{display:block;border-radius:16px;overflow:hidden;box-shadow:0 24px 60px rgba(20,18,14,.16);transition:transform .3s,box-shadow .3s}
+.shot a:hover{transform:translateY(-4px);box-shadow:0 32px 70px rgba(20,18,14,.22)}
+.shot img{width:100%;height:auto}
+.shot.tall img{width:auto;max-height:640px}
+
+/* about */
+.about{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(32px,6vw,72px)}
+.about p{font-size:18px;color:var(--text);margin-bottom:16px}
+.about h4{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:500;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1px solid var(--line);background:var(--card);border-radius:100px;padding:8px 14px;font-size:14px}
+
+/* contacts */
+.contact{padding-top:clamp(64px,9vw,120px);padding-bottom:clamp(48px,6vw,72px)}
+.contact h2{font-weight:600;font-size:clamp(48px,8vw,88px);letter-spacing:-.04em;line-height:1;margin-top:20px}
+.contact p{font-size:clamp(17px,2vw,20px);color:var(--text);margin-top:24px;max-width:640px}
+.clist{display:flex;flex-wrap:wrap;gap:16px 48px;margin-top:40px}
+.clist a{font-size:17px;border-bottom:1px solid var(--line);padding-bottom:4px;transition:border-color .2s}
+.clist a:hover{border-color:var(--ink)}
+.clist span{display:block;font-size:12px;color:var(--mute);letter-spacing:.04em;margin-bottom:6px}
+footer{font-size:13px;color:var(--mute);padding:28px 0 40px;border-top:1px solid var(--line)}
+
+@media (max-width:900px){
+  nav{gap:18px;font-size:14px}
+  .hero{grid-template-columns:1fr}
+  .stack{max-width:560px;width:100%;justify-self:center}
+  .case{grid-template-columns:1fr}
+  .case .shot{order:-1}
+  .about{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  nav a.hide-sm{display:none}
+  .shot.tall img{max-height:none;width:100%}
+  .btn{width:100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">Алина Япарова</a>
+    <nav>
+      <a href="#works">Работы</a>
+      <a href="#about" class="hide-sm">Обо мне</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="label">Портфолио · 2026</div>
+      <h1>Алина<br>Япарова</h1>
+      <div class="role">UI/UX и веб-дизайнер</div>
+      <p class="intro">Проектирую лендинги и интерфейсы в Figma. Получаю профильное образование в области дизайна, три года преподавала ИЗО.</p>
+      <div class="actions">
+        <a class="btn dark" href="#works">Смотреть работы ↓</a>
+        <a class="btn ghost" href="https://t.me/ArkyshaTishkovih" target="_blank" rel="noopener">Написать в Telegram</a>
+      </div>
+    </div>
+    <div class="stack" aria-hidden="true">
+      <img class="a" src="img/perfume.webp" alt="">
+      <img class="b" src="img/gym.webp" alt="">
+      <img class="c" src="img/drone.webp" alt="">
+    </div>
+  </div>
+
+  <section id="works" class="wrap">
+    <div class="sec-head"><h2>Работы</h2><div class="label">5 проектов</div></div>
+
+    <article class="case">
+      <div>
+        <div class="num">01<em>/05</em></div>
+        <div class="kind">Интернет-магазин парфюмерии · главный экран</div>
+        <h3>Perfume-Mode</h3>
+        <p class="lead">Концепт первого экрана для бренда парфюмерии. Задача — передать ощущение премиальности и сразу подвести к покупке.</p>
+        <ul>
+          <li>Контраст прямого и курсивного начертания в заголовке</li>
+          <li>Карточка товара с ценой и видео-превью поверх фотографии</li>
+          <li>Навигация в виде переключателей, счётчик корзины</li>
+        </ul>
+        <div class="tag">Учебный проект · Figma</div>
+        <a class="btn dark" target="_blank" rel="noopener" href="https://www.figma.com/proto/SHA9lpjSPHgEtAn6a4fm7D/%D0%9B%D0%B8%D0%BD%D0%B5%D0%B9%D0%BA%D0%B0-%D0%BF%D0%B0%D1%80%D1%84%D1%8E%D0%BC%D0%B5%D1%80%D0%B8%D1%8F?node-id=1-2&p=f&scaling=contain&content-scaling=fixed">Открыть прототип в Figma →</a>
+      </div>
+      <div class="shot"><a target="_blank" rel="noopener" href="https://www.figma.com/proto/SHA9lpjSPHgEtAn6a4fm7D/%D0%9B%D0%B8%D0%BD%D0%B5%D0%B9%D0%BA%D0%B0-%D0%BF%D0%B0%D1%80%D1%84%D1%8E%D0%BC%D0%B5%D1%80%D0%B8%D1%8F?node-id=1-2&p=f&scaling=contain&content-scaling=fixed"><img src="img/perfume.webp" alt="Главный экран Perfume-Mode" loading="lazy" width="1149" height="722"></a></div>
+    </article>
+
+    <article class="case">
+      <div>
+        <div class="num">02<em>/05</em></div>
+        <div class="kind">Фитнес-клуб · промо-сайт</div>
+        <h3>X’FLOW GYM</h3>
+        <p class="lead">Первый экран сайта фитнес-клуба для молодой аудитории: яркий, динамичный, с понятным главным действием.</p>
+        <ul>
+          <li>Модульная сетка из скруглённых блоков</li>
+          <li>Неоновая палитра и акцентная кнопка «Записаться»</li>
+          <li>Ключевые цифры в полупрозрачных карточках, видео-превью зала</li>
+        </ul>
+        <div class="tag">Учебный проект · Figma</div>
+        <a class="btn dark" target="_blank" rel="noopener" href="https://www.figma.com/proto/NnCAHvdIOLrTp8UpyU8bmR/%D0%A4%D0%B8%D1%82%D0%BD%D0%B5%D1%81-%D0%BA%D0%BB%D1%83%D0%B1?node-id=1-2&p=f&scaling=contain&content-scaling=fixed">Открыть прототип в Figma →</a>
+      </div>
+      <div class="shot"><a target="_blank" rel="noopener" href="https://www.figma.com/proto/NnCAHvdIOLrTp8UpyU8bmR/%D0%A4%D0%B8%D1%82%D0%BD%D0%B5%D1%81-%D0%BA%D0%BB%D1%83%D0%B1?node-id=1-2&p=f&scaling=contain&content-scaling=fixed"><img src="img/gym.webp" alt="Главный экран X’FLOW GYM" loading="lazy" width="1142" height="717"></a></div>
+    </article>
+
+    <article class="case">
+      <div>
+        <div class="num">03<em>/05</em></div>
+        <div class="kind">Линейка дронов · промо-лендинг</div>
+        <h3>MDR Ultra Light</h3>
+        <p class="lead">Презентация флагманской модели дрона. Тёмная премиальная подача, в центре внимания — продукт.</p>
+        <ul>
+          <li>Центральная композиция со световым акцентом</li>
+          <li>Слайдер моделей линейки с переключением</li>
+          <li>Два уровня действий: предзаказ и «Подробнее»</li>
+        </ul>
+        <div class="tag">Учебный проект · Figma</div>
+        <a class="btn dark" target="_blank" rel="noopener" href="https://www.figma.com/proto/1heGE8ctJEOwLl2cZkv8Ch/%D0%94%D1%80%D0%BE%D0%BD?node-id=1-2&t=AIu74OzuS8TlJ1fl-6&scaling=contain&content-scaling=fixed">Открыть прототип в Figma →</a>
+      </div>
+      <div class="shot"><a target="_blank" rel="noopener" href="https://www.figma.com/proto/1heGE8ctJEOwLl2cZkv8Ch/%D0%94%D1%80%D0%BE%D0%BD?node-id=1-2&t=AIu74OzuS8TlJ1fl-6&scaling=contain&content-scaling=fixed"><img src="img/drone.webp" alt="Главный экран MDR Ultra Light" loading="lazy" width="1113" height="667"></a></div>
+    </article>
+
+    <article class="case">
+      <div>
+        <div class="num">04<em>/05</em></div>
+        <div class="kind">Фен · продуктовый лендинг</div>
+        <h3>Whoosh</h3>
+        <p class="lead">Минималистичный экран продукта: много воздуха, крупная типографика и внимание к деталям устройства.</p>
+        <ul>
+          <li>Асимметричная композиция «текст — продукт»</li>
+          <li>Интерактивные точки на товаре для рассказа о функциях</li>
+          <li>Сдержанная палитра под цвет продукта</li>
+        </ul>
+        <div class="tag">Учебный проект · Figma</div>
+        <a class="btn dark" target="_blank" rel="noopener" href="https://www.figma.com/proto/t2d3ckqXDjARVIZcnR41Un/%D0%A4%D0%B5%D0%BD-%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3?node-id=2-3&t=AIu74OzuS8TlJ1fl-6&scaling=contain&content-scaling=fixed">Открыть прототип в Figma →</a>
+      </div>
+      <div class="shot"><a target="_blank" rel="noopener" href="https://www.figma.com/proto/t2d3ckqXDjARVIZcnR41Un/%D0%A4%D0%B5%D0%BD-%D0%BB%D0%B5%D0%BD%D0%B4%D0%B8%D0%BD%D0%B3?node-id=2-3&t=AIu74OzuS8TlJ1fl-6&scaling=contain&content-scaling=fixed"><img src="img/fen.webp" alt="Главный экран Whoosh" loading="lazy" width="1154" height="710"></a></div>
+    </article>
+
+    <article class="case">
+      <div>
+        <div class="num">05<em>/05</em></div>
+        <div class="kind">Каршеринг · полный лендинг</div>
+        <h3>CarPro</h3>
+        <p class="lead">Лендинг сервиса каршеринга целиком — от первого экрана до футера, с логикой «узнал → понял → скачал».</p>
+        <ul>
+          <li>Структура: первый экран, быстрый старт в 3 шага, автопарк, тарифы</li>
+          <li>Единая сетка карточек, теги с условиями аренды</li>
+          <li>Фирменный синий и оранжевый акцент для действий</li>
+        </ul>
+        <div class="tag">Учебный проект · Figma</div>
+        <a class="btn dark" target="_blank" rel="noopener" href="https://www.figma.com/proto/6WEK0M9E56NOfB6qOo6Kdt/CarPro---%D0%BA%D0%B0%D1%80%D1%88%D0%B5%D1%80%D0%B8%D0%BD%D0%B3-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D0%BE%D0%B2?node-id=3-111&t=LyjaxOxpqNw3wkGi-6&scaling=contain&content-scaling=fixed">Открыть прототип в Figma →</a>
+      </div>
+      <div class="shot tall"><a target="_blank" rel="noopener" href="https://www.figma.com/proto/6WEK0M9E56NOfB6qOo6Kdt/CarPro---%D0%BA%D0%B0%D1%80%D1%88%D0%B5%D1%80%D0%B8%D0%BD%D0%B3-%D0%B4%D0%BB%D1%8F-%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D0%BE%D0%B2?node-id=3-111&t=LyjaxOxpqNw3wkGi-6&scaling=contain&content-scaling=fixed"><img src="img/carpro.webp" alt="Лендинг CarPro целиком" loading="lazy" width="467" height="716"></a></div>
+    </article>
+  </section>
+
+  <section id="about" class="wrap" style="padding-top:clamp(56px,8vw,96px)">
+    <div class="sec-head"><h2>Обо мне</h2></div>
+    <div class="about">
+      <div>
+        <p>Начинающий UI/UX и веб-дизайнер. Работаю в Figma: проектирую лендинги и интерфейсы, собираю адаптивные макеты, использую Auto Layout, компоненты и стили.</p>
+        <p>Учусь заочно на 4 курсе по направлению «Декоративно-прикладное искусство и дизайн» (ЮУрГГПУ) и слушаю магистерскую программу «Человеко-машинное взаимодействие в информационных системах» (УрФУ).</p>
+        <p>Три года преподавала ИЗО и вела начальные классы — отсюда крепкая база в композиции и цвете, умение объяснять сложное просто и спокойно работать с обратной связью.</p>
+      </div>
+      <div>
+        <h4>Инструменты и навыки</h4>
+        <div class="chips"><span>Figma</span><span>Auto Layout</span><span>Компоненты и стили</span><span>Прототипирование</span><span>Лендинги</span><span>Веб-дизайн</span><span>Типографика</span><span>Композиция</span><span>Теория цвета</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap contact">
+    <div class="label">Контакты</div>
+    <h2>Давайте<br>работать вместе</h2>
+    <p>Ищу позицию junior-дизайнера или стажировку — удалённо или в офисе в Челябинске. С удовольствием выполню тестовое задание.</p>
+    <div class="clist">
+      <a href="tel:+79026053531"><span>Телефон</span>+7 (902) 605-35-31</a>
+      <a href="https://t.me/ArkyshaTishkovih" target="_blank" rel="noopener"><span>Telegram</span>@ArkyshaTishkovih</a>
+      <a href="mailto:ya.a_snowflake@mail.ru"><span>Почта</span>ya.a_snowflake@mail.ru</a>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Алина Япарова</div></footer>
+
+</body>
+</html>
